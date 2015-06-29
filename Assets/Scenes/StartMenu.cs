@@ -16,11 +16,15 @@ public class StartMenu : MonoBehaviour {
 
 	public void OnStartButtonClick() {
 		NetworkManager.singleton.StartHost ();
-
+		Registry.put ("host", true);
 		Application.LoadLevel ("WaitPlayer");
 	}
 
 	public void OnJoinButtonClick() {
 		Application.LoadLevel ("JoinGame");
+	}
+
+	public void OnSettingButtonClick() {
+		Application.LoadLevel ("Setting");
 	}
 }

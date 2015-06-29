@@ -16,7 +16,7 @@ public class JudgeMain : MonoBehaviour, IDropCallback {
 		// Initialize Interface
 		int qIndex = localPlayer.question;
 		string question = Data.QUESTIONS[qIndex];
-		GameObject.Find ("Question Text").GetComponent<Text> ().text = question;
+		GameObject.Find ("Question Card").GetComponent<Card> ().cardText.text = question;
 
 		// Initialize Counter
 		choiceCounter = 0;

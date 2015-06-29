@@ -12,6 +12,12 @@ public class LobbyPlayer : NetworkBehaviour {
 	public string playerName;
 
 	[SyncVar]
+	public int avatarIndex;
+
+	[SyncVar]
+	public bool isHost;
+
+	[SyncVar]
 	public bool isJudge;
 
 	[SyncVar]
@@ -31,6 +37,10 @@ public class LobbyPlayer : NetworkBehaviour {
 		Debug.Log ("OnStartLocalPlayer");
 		DontDestroyOnLoad (this);
 		Registry.put ("localPlayer", this);
+
+		this.avatarIndex = PlayerPrefs.GetInt ("Player Avatar");
+		this.playerName = PlayerPrefs.GetString ("Player Name");
+		this.isHost = (null != Registry.get ("host"));	
 	}
 
 	[Command]
