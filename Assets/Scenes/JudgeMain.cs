@@ -28,6 +28,8 @@ public class JudgeMain : MonoBehaviour, IDropCallback {
 		Card card = GameObject.Find (cardName).GetComponent<Card>();
 		card.cardTitleText.text = String.Format ("{0}", playerId);
 		card.cardText.text = Data.ANSWERS [cardId];
+
+		//Score playerScore = GameObject.Find(
 	}
 
 	public void OnDrop(GameObject target) {

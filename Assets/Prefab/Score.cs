@@ -21,22 +21,19 @@ public class Score : MonoBehaviour {
 
 	}
 
-	count=1 ;  0=80, 1 
-	index = 1;
 
 
 	public void setScore(int index,int score) {
 
 
 		while (index>=arrayOfScores.Count) {
+
 			arrayOfScores.Add(0);
+
 		}
+
 		arrayOfScores [index] = score;
 
-
-
 	}
-
-
 
 }

@@ -12,6 +12,19 @@ public class GameResult : MonoBehaviour {
 		StartCoroutine(WaitAndRun ());
 	}
 
+
+	void setScore(){
+
+		for each player,
+
+		if Judge, +3
+		if normal Player, +2
+		if Winner + 10 ;
+
+
+
+	}
+
 	IEnumerator WaitAndRun () {
 		yield return new WaitForSeconds (5);
 
