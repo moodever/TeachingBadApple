@@ -1,4 +1,4 @@
-﻿ausing UnityEngine;
+﻿using UnityEngine;
 using System;
 using UnityEngine.Networking;
 using System.Collections;
@@ -82,6 +82,9 @@ public class LobbyPlayer : NetworkBehaviour {
 
 	    counter = 0;
 		LobbyPlayer localPlayer = (LobbyPlayer)Registry.get ("localPlayer");
+
+
+
 		foreach (LobbyPlayer player in FindObjectsOfType<LobbyPlayer> ()) {
 			player.question = question;
 			if(player.id == judgeIndex) {
@@ -92,7 +95,7 @@ public class LobbyPlayer : NetworkBehaviour {
 				player.options = data[counter++];
 			}
 			
-:			if(player == localPlayer) {
+			if(player == localPlayer) {
 				if(player.isJudge) {
 					player.StartAsJudge();
 				} else {
@@ -100,7 +103,7 @@ public class LobbyPlayer : NetworkBehaviour {
 				}
 			} else {
 				if(player.isJudge) {
-					player.RpcSstartAsJudge();
+					player.RpcStartAsJudge();
 				} else {
 					player.RpcStartAsPlayer();
 				}
