@@ -6,7 +6,7 @@ using System.Collections;
 
 public class JudgeMain : MonoBehaviour, IDropCallback {
 
-	public GameObject cardPlayerPrefab;
+	public GameObject cardPrefab;
 
 	private int choiceCounter = 0;
 
@@ -20,6 +20,16 @@ public class JudgeMain : MonoBehaviour, IDropCallback {
 
 		// Initialize Counter
 		choiceCounter = 0;
+
+		int playerLength = GameObject.FindObjectsOfType<LobbyPlayer> ().Length;
+		Debug.Log(playerLength);
+		for (int i = 0; i < playerLength; i++) {
+			AddCard(i);
+		}
+	}
+
+	void Update() {
+
 	}
 
 	// Card Chosen by Player and displayed to Judge
@@ -38,16 +48,11 @@ public class JudgeMain : MonoBehaviour, IDropCallback {
 		cp.CmdAnswerChosen (Int32.Parse(card.cardTitleText.text),card.cardId);
 	}
 
-	public void OnTestCard0() {
-		OnCardChosen (0, 5);
-	}
-
-	public void OnTestCard1() {
-		OnCardChosen (1, 10);
-	}
-
-	public void OnTestAnswerChosen() {
-		// Card 0 is chosen by judge
-		OnDrop (GameObject.Find ("Card 0"));
+	public void AddCard(int i) {
+		GameObject container = GameObject.Find ("Cards"); 
+		GameObject newCard = GameObject.Instantiate (cardPrefab, Vector3.zero, Quaternion.identity) as GameObject;
+		newCard.name = String.Format ("Card {0}", i);
+		newCard.GetComponent<LayoutElement> ().preferredHeight = 100;
+		newCard.GetComponent<Transform>().SetParent(container.GetComponent<Transform>());
 	}
 }

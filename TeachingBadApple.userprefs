@@ -1,16 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Prefab/Score.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Prefab/LobbyPlayer.cs">
     <Files>
-      <File FileName="Assets/Scenes/Setting.cs" Line="25" Column="1" />
-      <File FileName="Assets/Prefab/LobbyPlayer.cs" Line="30" Column="1" />
-      <File FileName="Assets/Code/DragSupport/DropZone.cs" Line="1" Column="1" />
-      <File FileName="Assets/Code/DragSupport/Draggable.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/StartMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/JudgeMain.cs" Line="24" Column="2" />
-      <File FileName="Assets/Scenes/WaitPlayer.cs" Line="49" Column="48" />
-      <File FileName="Assets/Prefab/Score.cs" Line="29" Column="39" />
-      <File FileName="Assets/Scenes/GameResult.cs" Line="23" Column="3" />
+      <File FileName="Assets/Scenes/GameResult.cs" Line="30" Column="1" />
+      <File FileName="Assets/Prefab/LobbyPlayer.cs" Line="89" Column="5" />
+      <File FileName="Assets/Prefab/ResultPlayer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

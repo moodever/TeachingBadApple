@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿ausing UnityEngine;
 using System;
 using UnityEngine.Networking;
 using System.Collections;
@@ -21,10 +21,16 @@ public class LobbyPlayer : NetworkBehaviour {
 	public bool isJudge;
 
 	[SyncVar]
+	public bool isWinner;
+
+	[SyncVar]
 	public int question;
 
 	[SyncVar]
 	public int[] options;
+
+	[SyncVar]
+	public int score;
 
 	private static int CARD_NUM = 5;
 
@@ -37,10 +43,18 @@ public class LobbyPlayer : NetworkBehaviour {
 		Debug.Log ("OnStartLocalPlayer");
 		DontDestroyOnLoad (this);
 		Registry.put ("localPlayer", this);
+	
+		this.CmdUpdateUserInfo(PlayerPrefs.GetInt ("Player Avatar"), 
+		                       PlayerPrefs.GetString ("Player Name"),
+		                       (null != Registry.get ("host")));
+	}
 
-		this.avatarIndex = PlayerPrefs.GetInt ("Player Avatar");
-		this.playerName = PlayerPrefs.GetString ("Player Name");
-		this.isHost = (null != Registry.get ("host"));	
+	[Command]
+	public void CmdUpdateUserInfo(int avatarIndex, string playerName, bool isHost) {
+		this.avatarIndex = avatarIndex;
+		this.playerName = playerName;
+		this.isHost = isHost;	
+
 	}
 
 	[Command]
@@ -72,12 +86,13 @@ public class LobbyPlayer : NetworkBehaviour {
 			player.question = question;
 			if(player.id == judgeIndex) {
 				player.isJudge = true;
+
 			} else {
 				player.isJudge = false;
 				player.options = data[counter++];
 			}
 			
-			if(player == localPlayer) {
+:			if(player == localPlayer) {
 				if(player.isJudge) {
 					player.StartAsJudge();
 				} else {
@@ -85,7 +100,7 @@ public class LobbyPlayer : NetworkBehaviour {
 				}
 			} else {
 				if(player.isJudge) {
-					player.RpcStartAsJudge();
+					player.RpcSstartAsJudge();
 				} else {
 					player.RpcStartAsPlayer();
 				}
@@ -105,6 +120,8 @@ public class LobbyPlayer : NetworkBehaviour {
 		Debug.Log ("RpcStartAsJudge called");
 		if (isLocalPlayer) {
 			Debug.Log("Player "+id +" will switch to judge scene");
+			//Registry.put ("Previous Scene", "JudgeMain");
+			//Application.LoadLevel("JudgeNotify");
 			Application.LoadLevel ("JudgeMain");
 		} else {
 			Debug.Log("Play as Judge Command from non-local player");
@@ -115,6 +132,9 @@ public class LobbyPlayer : NetworkBehaviour {
 		Debug.Log ("StartAsJudge called");
 		if (isLocalPlayer) {
 			Debug.Log("Player "+id +" will switch to judge scene");
+
+			//Registry.put ("Previous Scene", "JudgeMain");
+			//Application.LoadLevel("JudgeNotify");
 			Application.LoadLevel ("JudgeMain");
 		} else {
 			Debug.Log("Play as Judge Command from non-local player");
@@ -126,6 +146,10 @@ public class LobbyPlayer : NetworkBehaviour {
 		Debug.Log ("RpcStartAsPlayer called");
 		if (isLocalPlayer) {
 			Debug.Log("Player "+id +" will switch to player scene");
+
+			//Registry.put ("Previous Scene", "PlayerMain");
+			//Application.LoadLevel("JudgeNotify");
+
 			Application.LoadLevel ("PlayerMain");
 		} else {	
 			Debug.Log ("Play as Player Command from non-local player");
@@ -136,6 +160,11 @@ public class LobbyPlayer : NetworkBehaviour {
 		Debug.Log ("StartAsPlayer called");
 		if (isLocalPlayer) {
 			Debug.Log("Player "+id +" will switch to player scene");
+
+			//Registry.put ("Previous Scene", "PlayerMain");
+			//Application.LoadLevel("JudgeNotify");
+
+
 			Application.LoadLevel ("PlayerMain");
 		} else {	
 			Debug.Log ("Play as Player Command from non-local player");
@@ -173,10 +202,41 @@ public class LobbyPlayer : NetworkBehaviour {
 	
 	[Command]
 	public void CmdAnswerChosen(int playerId, int cardId) {
-		// TODO: Update Score
-		
+		Debug.Log ("AnswerChose - update score is called");
+
+		LobbyPlayer[] players = FindObjectsOfType<LobbyPlayer> ();
+		int playerNumber = players.Length;
+		string info = String.Format("{0}/3", playerNumber);
+
+		for (int i=0; i< playerNumber; i++) {
+			
+			LobbyPlayer player = players[i];
+			
+			if (player.isJudge == true) {
+
+				player.score = player.score +2;
+				player.isWinner = false;
+			}
+
+			else if (player.id == playerId) {
+
+				player.score = player.score + 10;
+				player.isWinner = true;
+
+			}
+
+			else {
+
+				player.score = player.score +1;
+				player.isWinner = false;
+			}
+		}
+
 		NetworkManager.singleton.ServerChangeScene ("GameResult");
+	
 	}
+
+
 
 	[Command]
 	public void CmdNextRound() {

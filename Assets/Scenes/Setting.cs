@@ -9,7 +9,11 @@ public class Setting : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		InputField field = GameObject.Find ("InputField").GetComponent<InputField> ();
+		field.text = PlayerPrefs.GetString("Player Name");
+
+		SwitchAvatar(PlayerPrefs.GetInt("Player Avatar"));
+
 	}
 	
 	// Update is called once per frame
@@ -22,7 +26,9 @@ public class Setting : MonoBehaviour {
 		string userName = field.text;
 		PlayerPrefs.SetString("Player Name", userName);
 		PlayerPrefs.Save ();
-		Application.LoadLevel("StartMenu");
+		string sceneName = (string)Registry.get ("Previous Scene");
+		Debug.Log (sceneName);
+		Application.LoadLevel(sceneName);
 	}
 
 

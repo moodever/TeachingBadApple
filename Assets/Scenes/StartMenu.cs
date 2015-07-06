@@ -25,6 +25,13 @@ public class StartMenu : MonoBehaviour {
 	}
 
 	public void OnSettingButtonClick() {
+		Registry.put ("Previous Scene", "StartMenu");
 		Application.LoadLevel ("Setting");
 	}
+
+	public void OnInstructionButtonClick() {
+		Registry.put ("Previous Scene", "StartMenu");
+		Application.LoadLevel ("instruction");
+	}
+
 }

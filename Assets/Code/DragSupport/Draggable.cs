@@ -77,13 +77,6 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDrag
 			RectTransform transform = ((RectTransform)this.transform);
 			RectTransform parent = ((RectTransform)this.transform.parent);
 			transform.position = parent.position;
-//			Debug.Log (transform.rect);
-//			Debug.Log (parent.rect);
-//			float x = parent.position.x + parent.rect.width/2 - transform.rect.width/2;
-//			float y = parent.position.y + parent.rect.height/2 - transform.rect.height/2;
-//			Debug.Log (parent.position);
-//			Debug.Log (String.Format("{0},{1}",x,y));
-//			transform.position = new Vector3(x,y,0);
 		} else {
 			this.transform.SetSiblingIndex (placeholder.transform.GetSiblingIndex ()); 
 		}

@@ -59,8 +59,10 @@
      <Compile Include="Assets\Prefab\ResultPlayer.cs" />
      <Compile Include="Assets\Prefab\Score.cs" />
      <Compile Include="Assets\Scenes\GameResult.cs" />
+     <Compile Include="Assets\Scenes\Instruction.cs" />
      <Compile Include="Assets\Scenes\JoinGame.cs" />
      <Compile Include="Assets\Scenes\JudgeMain.cs" />
+     <Compile Include="Assets\Scenes\JudgeNotify.cs" />
      <Compile Include="Assets\Scenes\PlayerMain.cs" />
      <Compile Include="Assets\Scenes\Setting.cs" />
      <Compile Include="Assets\Scenes\StartMenu.cs" />
