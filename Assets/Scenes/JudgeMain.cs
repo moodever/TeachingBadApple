@@ -23,6 +23,7 @@ public class JudgeMain : MonoBehaviour, IDropCallback {
 
 		int playerLength = GameObject.FindObjectsOfType<LobbyPlayer> ().Length;
 		Debug.Log(playerLength);
+		playerLength = playerLength - 1;
 		for (int i = 0; i < playerLength; i++) {
 			AddCard(i);
 		}

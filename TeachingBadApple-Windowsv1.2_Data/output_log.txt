@@ -1,0 +1,121 @@
+Initialize engine version: 5.1.1f1 (2046fc06d4d8)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4000 (ID=0x166)
+    Vendor:   Intel
+    VRAM:     128 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Harper\Projects\TeachingBadApple\TeachingBadApple-Windowsv1.2_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Harper\Projects\TeachingBadApple\TeachingBadApple-Windowsv1.2_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Harper\Projects\TeachingBadApple\TeachingBadApple-Windowsv1.2_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Harper\Projects\TeachingBadApple\TeachingBadApple-Windowsv1.2_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Harper\Projects\TeachingBadApple\TeachingBadApple-Windowsv1.2_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Harper\Projects\TeachingBadApple\TeachingBadApple-Windowsv1.2_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Harper\Projects\TeachingBadApple\TeachingBadApple-Windowsv1.2_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Harper\Projects\TeachingBadApple\TeachingBadApple-Windowsv1.2_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Harper\Projects\TeachingBadApple\TeachingBadApple-Windowsv1.2_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Harper\Projects\TeachingBadApple\TeachingBadApple-Windowsv1.2_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.048 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Harper\Projects\TeachingBadApple\TeachingBadApple-Windowsv1.2_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Harper\Projects\TeachingBadApple\TeachingBadApple-Windowsv1.2_Data\Managed\System.dll (this message is harmless)
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.336023 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 272.
+Total: 0.287752 ms (FindLiveObjects: 0.038288 ms CreateObjectMapping: 0.011052 ms MarkObjects: 0.223412 ms  DeleteObjects: 0.011052 ms)
+
+the avatar image path is:avatar/avatar3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.377185 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 267.
+Total: 0.289726 ms (FindLiveObjects: 0.016973 ms CreateObjectMapping: 0.006710 ms MarkObjects: 0.255385 ms  DeleteObjects: 0.010262 ms)
+
+OnStartLocalPlayer
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+RpcStartAsJudge called
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Play as Judge Command from non-local player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+RpcStartAsPlayer called
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Player 0 will switch to player scene
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+RpcStartAsJudge called
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Play as Judge Command from non-local player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+RpcStartAsPlayer called
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Player 1 will switch to player scene
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.575505 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 372.
+Total: 0.341829 ms (FindLiveObjects: 0.020525 ms CreateObjectMapping: 0.014210 ms MarkObjects: 0.292883 ms  DeleteObjects: 0.013815 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.824180 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 372.
+Total: 0.279858 ms (FindLiveObjects: 0.033551 ms CreateObjectMapping: 0.023683 ms MarkObjects: 0.219070 ms  DeleteObjects: 0.002763 ms)
+
+(528.0, 149.0, 0.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+(528.0, 176.0, 0.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+(531.0, 283.0, 0.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+(538.0, 357.0, 0.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+(542.0, 377.0, 0.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Card 3was dropped on AnswerBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Card Chosen by Player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+OnEndDrag
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
